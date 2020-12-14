@@ -1,0 +1,52 @@
+﻿  Assembling GISAsm.asm...
+GISAsm.asm(1): error A2008: syntax error : .
+GISAsm.asm(2): error A2008: syntax error : .
+GISAsm.asm(15): error A2008: syntax error : .
+GISAsm.asm(43): error A2070: invalid instruction operands
+GISAsm.asm(44): error A2070: invalid instruction operands
+GISAsm.asm(46): error A2070: invalid instruction operands
+GISAsm.asm(47): error A2070: invalid instruction operands
+GISAsm.asm(49): error A2070: invalid instruction operands
+GISAsm.asm(50): error A2070: invalid instruction operands
+GISAsm.asm(52): error A2070: invalid instruction operands
+GISAsm.asm(53): error A2070: invalid instruction operands
+GISAsm.asm(55): error A2070: invalid instruction operands
+GISAsm.asm(56): error A2070: invalid instruction operands
+GISAsm.asm(57): error A2070: invalid instruction operands
+GISAsm.asm(58): error A2070: invalid instruction operands
+GISAsm.asm(59): error A2070: invalid instruction operands
+GISAsm.asm(61): error A2070: invalid instruction operands
+GISAsm.asm(62): error A2070: invalid instruction operands
+GISAsm.asm(63): error A2070: invalid instruction operands
+GISAsm.asm(65): error A2070: invalid instruction operands
+GISAsm.asm(66): error A2070: invalid instruction operands
+GISAsm.asm(73): error A2070: invalid instruction operands
+GISAsm.asm(74): error A2070: invalid instruction operands
+GISAsm.asm(76): error A2070: invalid instruction operands
+GISAsm.asm(77): error A2070: invalid instruction operands
+GISAsm.asm(79): error A2070: invalid instruction operands
+GISAsm.asm(80): error A2070: invalid instruction operands
+GISAsm.asm(82): error A2070: invalid instruction operands
+GISAsm.asm(83): error A2070: invalid instruction operands
+GISAsm.asm(85): error A2070: invalid instruction operands
+GISAsm.asm(87): error A2070: invalid instruction operands
+GISAsm.asm(88): error A2070: invalid instruction operands
+GISAsm.asm(90): error A2070: invalid instruction operands
+GISAsm.asm(91): error A2070: invalid instruction operands
+GISAsm.asm(93): error A2070: invalid instruction operands
+GISAsm.asm(94): error A2070: invalid instruction operands
+GISAsm.asm(96): error A2070: invalid instruction operands
+GISAsm.asm(97): error A2070: invalid instruction operands
+GISAsm.asm(99): error A2070: invalid instruction operands
+GISAsm.asm(100): error A2070: invalid instruction operands
+GISAsm.asm(107): error A2070: invalid instruction operands
+GISAsm.asm(111): error A2070: invalid instruction operands
+GISAsm.asm(114): error A2070: invalid instruction operands
+GISAsm.asm(116): error A2070: invalid instruction operands
+GISAsm.asm(117): error A2070: invalid instruction operands
+GISAsm.asm(119): error A2070: invalid instruction operands
+GISAsm.asm(120): error A2070: invalid instruction operands
+GISAsm.asm(122): error A2070: invalid instruction operands
+GISAsm.asm(127): error A2008: syntax error : main
+GISAsm.asm(127): error A2088: END directive required at end of file
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\GISAsm.obj" /W3 /errorReport:prompt  /TaGISAsm.asm" с кодом "1".

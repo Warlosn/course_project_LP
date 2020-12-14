@@ -1,0 +1,2 @@
+D:\GIS-2020\GISAsm\Debug\GISLib.pdb
+D:\GIS-2020\GISAsm\GISLib\Debug\GISLib.pdb

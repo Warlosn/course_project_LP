@@ -1,0 +1,42 @@
+procedure num keke(num x, num y)
+{
+act num z;
+act num t;
+act num s;
+z = expn(x, v2);
+t = kvadro(y, v3);
+s = x*(z+t);
+rc s; 
+}
+
+head
+{
+ act num x;
+ x = d1;
+ act num y;
+ y = v2;
+ act num z;
+ z = keke(x, y);
+ writed(z);
+ act cymb sa;
+ sa = "hi";
+ act cymb sb;
+ sb ="poit";
+ act char s;
+ s ='a';
+ act num f;
+ f = comp(sb, sa);
+ when( f < d1)
+[
+ writes(sa);
+]
+ else
+[
+ writes(s);
+]
+ writes("FitFit123");
+ z = sum(v3, v3);
+ writed(z); 
+ rc d0;
+}
+ 
