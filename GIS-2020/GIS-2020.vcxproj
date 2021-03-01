@@ -187,10 +187,10 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="in.txt" />
+    <None Include="..\GISAsm\GISAsm\GISAsm.asm" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\GISAsm\GISAsm\GISAsm.asm" />
+    <Text Include="in.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

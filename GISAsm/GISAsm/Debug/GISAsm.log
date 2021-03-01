@@ -1,3 +1,2 @@
 ﻿  Assembling GISAsm.asm...
-LINK : warning LNK4098: библиотека по умолчанию "libucrt.lib" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
-  GISAsm.vcxproj -> D:\GIS-2020\GISAsm\Debug\GISAsm.exe
+  GISAsm.vcxproj -> D:\GitHub\course_project_LP\GISAsm\Debug\GISAsm.exe

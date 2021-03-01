@@ -1,1 +1,28 @@
-﻿
+﻿  Error.cpp
+  FST.cpp
+D:\GitHub\course_project_LP\GIS-2020\FST.cpp(30,37): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+  Generation.cpp
+  GRB.cpp
+  In.cpp
+  IT.cpp
+  LexA.cpp
+D:\GitHub\course_project_LP\GIS-2020\LexA.cpp(123,58): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+D:\GitHub\course_project_LP\GIS-2020\LexA.cpp(133,58): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+D:\GitHub\course_project_LP\GIS-2020\LexA.cpp(47,7): warning C4101: result: неиспользованная локальная переменная
+  GIS-2020.cpp
+  Log.cpp
+D:\GitHub\course_project_LP\GIS-2020\Log.cpp(13,20): warning C4834: отмена возвращаемого значения функции с атрибутом "nodiscard"
+  LT.cpp
+  MFST.cpp
+D:\GitHub\course_project_LP\GIS-2020\MFST.h(27,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\GitHub\course_project_LP\GIS-2020\MFST.h(26): message : во время компиляции функции-члена класс шаблон "int Stack<MFST::MfstState>::size(void)"
+D:\GitHub\course_project_LP\GIS-2020\MFST.cpp(109): message : выполняется компиляция ссылки на экземпляр шаблон функции "int Stack<MFST::MfstState>::size(void)"
+D:\GitHub\course_project_LP\GIS-2020\MFST.h(100): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Stack<MFST::MfstState>"
+  Parm.cpp
+D:\GitHub\course_project_LP\GIS-2020\Parm.cpp(12,12): warning C4101: buf: неиспользованная локальная переменная
+  PolishNateishion.cpp
+  SemA.cpp
+  stdafx.cpp
+  Создание кода...
+D:\GitHub\course_project_LP\GIS-2020\PolishNateishion.cpp(136): warning C4715: PN::ArifmPriorities: значение возвращается не при всех путях выполнения
+  GIS-2020.vcxproj -> D:\GitHub\course_project_LP\x64\Debug\GIS-2020.exe

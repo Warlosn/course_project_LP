@@ -1,2 +1,4 @@
 D:\GIS-2020\GISAsm\Debug\GISLib.pdb
 D:\GIS-2020\GISAsm\GISLib\Debug\GISLib.pdb
+D:\GitHub\course_project_LP\GISAsm\Debug\GISLib.pdb
+D:\GitHub\course_project_LP\GISAsm\GISLib\Debug\GISLib.pdb

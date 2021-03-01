@@ -8,7 +8,7 @@ namespace CG
 	{
 		idT = pidT;
 		lexT = plexT;
-		out = std::ofstream("../GIAAsm/GIAAsm/GIAAsm.asm");
+		out = std::ofstream("../GISAsm/GISAsm/GISAsm.asm");
 		Head();
 		Constants();
 		Data();
@@ -21,7 +21,7 @@ namespace CG
 		out << "\tincludelib libucrt.lib\n";
 		out << "\tincludelib kernel32.lib\n";
 		out << "\tExitProcess PROTO :DWORD\n\n";
-		out << "\tincludelib ../Debug/LGPlib.lib\n";
+		out << "\tincludelib ../Debug/GISlib.lib\n";
 		out << "\twrites PROTO :DWORD\n";
 		out << "\twrited PROTO :DWORD\n";
 		out << "\tcomp PROTO :DWORD, :DWORD\n";
@@ -35,7 +35,7 @@ namespace CG
 		out << ".const\n";
 		for (int i = 0; i < idT.size; i++)
 		{
-			if (idT.table[i].idtype == 4)
+			if (idT.table[i].idtype == IT::L)
 			{
 				out << "\t" << idT.table[i].id;
 				if (idT.table[i].iddatatype == 2 || idT.table[i].iddatatype == 3)
@@ -53,12 +53,12 @@ namespace CG
 		{
 			if (lexT.table[i].lexema == 'a')
 			{
-				if (idT.table[lexT.table[i + 2].idxTI].idtype == 1)
+				if (idT.table[lexT.table[i + 2].idxTI].idtype == IT::V)
 				{
 					out << "\t" << idT.table[lexT.table[i + 2].idxTI].id;
-					if (idT.table[lexT.table[i + 2].idxTI].iddatatype == 2 || idT.table[lexT.table[i + 2].idxTI].iddatatype == 3)
+					if (idT.table[lexT.table[i + 2].idxTI].iddatatype == IT::CYMB || idT.table[lexT.table[i + 2].idxTI].iddatatype == IT::CHAR)
 						out << " DWORD ?";
-					if (idT.table[lexT.table[i + 2].idxTI].iddatatype == 1)
+					if (idT.table[lexT.table[i + 2].idxTI].iddatatype == IT::NUM)
 						out << " DWORD ?";
 					out << '\n';
 				}
@@ -69,6 +69,7 @@ namespace CG
 			}
 		}
 	}
+
 	void Gener::Code()
 	{
 		out << "\n.code\n";
@@ -86,6 +87,9 @@ namespace CG
 				indOfProc = i + 2;
 				out << idT.table[lexT.table[indOfProc].idxTI].id << " PROC ";
 				proc = true;
+
+				/// //////////
+
 				while (lexT.table[i].lexema != ')')
 				{
 					rhesis = i;
@@ -125,9 +129,9 @@ namespace CG
 					out << idT.table[lexT.table[indOfProc].idxTI].id << " ENDP\n\n";
 					proc = false;
 				}
-				else 
-					
-				indOfProc = 0;
+				else
+
+					indOfProc = 0;
 			}
 			if (lexT.table[i].lexema == 'r')
 			{
@@ -160,32 +164,6 @@ namespace CG
 				if (lexT.table[i + 2].lexema != 'j' && lexT.table[i + 4].lexema != 'j' && lexT.table[i + 2].lexema != 'm' && lexT.table[i + 4].lexema != 'm' &&
 					lexT.table[i + 2].lexema != 's' && lexT.table[i + 4].lexema != 's' && lexT.table[i + 2].lexema != 'w' && lexT.table[i + 4].lexema != 'w')
 				{
-					//out << "mov eax, " << idT.table[lexT.table[i + 2].idxTI].id << "\n";
-					//out << "cmp eax, " << idT.table[lexT.table[i + 4].idxTI].id << "\n";///////////
-					//if (lexT.table[i + 3].lexema == '>')
-					//{
-					//	out << "jg right" << countOfIF << std::endl << "jl wrong" << countOfIF << endl;
-					//}
-					//if (lexT.table[i + 3].lexema == '<')
-					//{
-					//	out << "jl right" << countOfIF << std::endl << "jg wrong" << countOfIF << endl;
-					//}
-					//if (lexT.table[i + 3].lexema == '&')
-					//{
-					//	out << "jz right" << countOfIF << std::endl << "jnz wrong" << countOfIF << endl;
-					//}
-					//if (lexT.table[i + 3].lexema == '!')
-					//{
-					//	out << "jnz right" << countOfIF << std::endl << "jz wrong" << countOfIF << endl;
-					//}
-					//if (lexT.table[i + 3].lexema == '^')
-					//{
-					//	out << "jge right" << countOfIF << std::endl << "jle wrong" << countOfIF << endl;
-					//}
-					//if (lexT.table[i + 3].lexema == '~')
-					//{
-					//	out << "jle right" << countOfIF << std::endl << "jge wrong" << countOfIF << endl;
-					//}
 					out << "mov eax, " << idT.table[lexT.table[i + 2].idxTI].id << "\n";
 					out << "cmp eax, " << idT.table[lexT.table[i + 4].idxTI].id << "\n";
 					if (lexT.table[i + 3].lexema == '>') {
@@ -287,7 +265,7 @@ namespace CG
 					}
 					if (lexT.table[i + 3].lexema == '<')
 					{
-						out << "jl right" << countOfIf << std::endl << "jl wrong" << countOfIf << endl;
+						out << "jl right" << countOfIf << std::endl << "jz wrong" << countOfIf << endl;//
 					}
 					if (lexT.table[i + 3].lexema == '&')
 					{
@@ -309,8 +287,8 @@ namespace CG
 
 			}
 
-			if (lexT.table[i].lexema == ']' )
-				{
+			if (lexT.table[i].lexema == ']')
+			{
 				if (rif) {
 					out << "fin" << countOfIf << ":" << endl;
 					rif = false;
@@ -319,7 +297,7 @@ namespace CG
 					out << "jmp fin" << countOfIf << endl;
 				}
 
-				}
+			}
 			if (lexT.table[i].lexema == '[')
 			{
 				if (lexT.table[i - 1].lexema == 'e')
@@ -348,7 +326,7 @@ namespace CG
 						out << "push offset " << idT.table[lexT.table[i].idxTI].id << "\n";
 					if (lexT.table[i].lexema == 'q')
 						out << "push offset " << idT.table[lexT.table[i].idxTI].id << "\n";
-					if (lexT.table[i].lexema == '@')
+					if (lexT.table[i].lexema == '@')											//!!
 					{
 						out << "call " << idT.table[lexT.table[i].idxTI].id << "\n";
 						out << "push eax\n";
@@ -384,5 +362,7 @@ namespace CG
 		out << "end main\n";
 
 	}
+
+
+
 }
-//TODO: вставить стандартную либц в шапку

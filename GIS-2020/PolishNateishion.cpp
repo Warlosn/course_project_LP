@@ -13,6 +13,7 @@ namespace PN
 			}
 		}
 	}
+
 	void Conversation(LT::LexTable* lextable, IT::IdTable* idtable, int lextable_pos)
 	{
 		std::stack<LT::Entry> st;

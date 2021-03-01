@@ -16,7 +16,7 @@ head
  act num y;
  y = v2;
  act num z;
- z = keke(x, y);
+ z =  expn(x, y);
  writed(z);
  act cymb sa;
  sa = "hi";
@@ -26,7 +26,7 @@ head
  s ='a';
  act num f;
  f = comp(sb, sa);
- when( f < d1)
+ when( f ! d1)
 [
  writes(sa);
 ]
@@ -34,7 +34,7 @@ head
 [
  writes(s);
 ]
- writes("FitFit123");
+ writes("Bstu2020");
  z = sum(v3, v3);
  writed(z); 
  rc d0;

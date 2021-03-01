@@ -4,7 +4,7 @@
 	includelib kernel32.lib
 	ExitProcess PROTO :DWORD
 
-	includelib ../Debug/GISLib.lib
+	includelib ../Debug/GISlib.lib
 	writes PROTO :DWORD
 	writed PROTO :DWORD
 	comp PROTO :DWORD, :DWORD
@@ -22,7 +22,7 @@
 	literal5 BYTE "poit", 0
 	literal6 BYTE 'a', 0
 	literal7 DWORD 1
-	literal8 BYTE "FitFit123", 0
+	literal8 BYTE "Bstu2020", 0
 	literal9 DWORD 3
 	literal10 DWORD 3
 	literal11 DWORD 0
@@ -78,7 +78,7 @@ pop yhea
 
 push xhea
 push yhea
-call keke
+call expn
 push eax
 pop zhea
 
@@ -101,7 +101,7 @@ pop fhea
 
 mov eax, fhea
 cmp eax, literal7
-jl right1
+jnz right1
 jl wrong1
 right1:
 	push sahea

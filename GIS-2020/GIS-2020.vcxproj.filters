@@ -112,13 +112,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="in.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\GISAsm\GISAsm\GISAsm.asm">
       <Filter>Файлы ресурсов</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="in.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
 </Project>

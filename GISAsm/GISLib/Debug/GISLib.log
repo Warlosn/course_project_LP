@@ -1,5 +1,5 @@
 ﻿  pch.cpp
   GISLib.cpp
-D:\GIS-2020\GISAsm\GISLib\GISLib.cpp(20,13): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-D:\GIS-2020\GISAsm\GISLib\GISLib.cpp(47,13): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-  GISLib.vcxproj -> D:\GIS-2020\GISAsm\Debug\GISLib.lib
+D:\GitHub\course_project_LP\GISAsm\GISLib\GISLib.cpp(20,13): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\GitHub\course_project_LP\GISAsm\GISLib\GISLib.cpp(47,13): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+  GISLib.vcxproj -> D:\GitHub\course_project_LP\GISAsm\Debug\GISLib.lib
